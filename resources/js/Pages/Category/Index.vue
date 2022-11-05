@@ -35,6 +35,9 @@ defineProps({
                             <th>
                                Ver
                             </th>
+                            <th>
+                             Editar
+                            </th>
 
                         </tr>
                     </thead>
@@ -48,6 +51,9 @@ defineProps({
                             </td>
                             <td>
                              <Link class="m-2 py-2 px-4  bg-indigo-400 hover:bg-indigo-700 rounded" v-bind:href="route('category.show', category.id)" as="button"> ver </Link>
+                            </td>
+                            <td>
+                             <Link class="m-2 py-2 px-4  bg-orange-400 hover:bg-indigo-700 rounded" v-bind:href="route('category.edit', category.id)" as="button"> Editar </Link>
                             </td>
                         </tr>
                     </tbody>
