@@ -47,13 +47,7 @@ const showDialog = ref(false);
       <SecondaryButton @click="enviar" >Si</SecondaryButton>
       <SecondaryButton @click="useForm().delete(route('category.destroy',category.id))" >Otro Si</SecondaryButton>
       <SecondaryButton @click="showDialog = false"> No </SecondaryButton>
-
     </template>
-
-  
-
-
-
   </DialogModal>
 
 </template>

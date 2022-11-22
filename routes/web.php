@@ -6,6 +6,9 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\librosController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +44,14 @@ Route::middleware([
     });
     
     Route::resource('category', CategoryController:: class);
+
+    ////Route::resource('product', ProductController:: class);
+    
+    Route::get('product', [ProductController:: class,'index'])->name('product.index');
+    Route::post('product', [ProductController:: class,'store'])->name('product.store');
+    Route::put('product', [ProductController:: class,'update'])->name('product.update');
+    Route::delete('product', [ProductController:: class,'destroy'])->name('product.destroy');
+
 
 ///Route::get('/categoria',[CategoryController::class,'index'])->name('category.index');
 
